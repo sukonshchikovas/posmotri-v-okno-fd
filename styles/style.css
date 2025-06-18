@@ -148,7 +148,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   display: block;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -164,7 +164,10 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  cursor: pointer
+  cursor: pointer;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  
 }
 
 .button:hover {
@@ -187,7 +190,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .search-form__submit-button { 
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
@@ -199,7 +201,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .more-button {
   margin-top: 30px;
   width: calc(100% - 6px);
-  height: 34px;
 }
 
 .title {
@@ -243,6 +244,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__card-link:hover {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .content__card-link:active {
@@ -267,6 +269,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__video-card-description-container {
   overflow: hidden;
+  max-width: 194px;
   flex-grow: 1;
 }
 
@@ -282,10 +285,11 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__video-card-description {
   line-height: 16.2px;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  white-space: normal;
 }
 
 .content__video-card-thumbnail {
@@ -293,6 +297,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 /* Кастомный скроллбар */
